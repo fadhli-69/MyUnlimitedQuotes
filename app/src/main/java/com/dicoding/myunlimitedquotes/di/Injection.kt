@@ -9,6 +9,6 @@ object Injection {
     fun provideRepository(context: Context): QuoteRepository {
         val database = QuoteDatabase.getDatabase(context)
         val apiService = ApiConfig.getApiService()
-        return QuoteRepository(database, apiService)
+        return QuoteRepository(apiService)
     }
 }
